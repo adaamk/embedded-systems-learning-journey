@@ -1,0 +1,316 @@
+
+External_Interrupt.elf:     file format elf32-avr
+
+Sections:
+Idx Name          Size      VMA       LMA       File off  Algn
+  0 .text         000000ae  00000000  00000000  000000d4  2**1
+                  CONTENTS, ALLOC, LOAD, READONLY, CODE
+  1 .data         00000000  00800060  000000ae  000001d0  2**0
+                  ALLOC
+  2 .comment      0000002f  00000000  00000000  00000254  2**0
+                  CONTENTS, READONLY
+  3 .stack.descriptors.hdr 0000000e  00000000  00000000  00000283  2**0
+                  CONTENTS, READONLY
+  4 .debug_aranges 00000058  00000000  00000000  00000291  2**0
+                  CONTENTS, READONLY, DEBUGGING
+  5 .debug_info   00000b35  00000000  00000000  000002e9  2**0
+                  CONTENTS, READONLY, DEBUGGING
+  6 .debug_abbrev 0000060d  00000000  00000000  00000e1e  2**0
+                  CONTENTS, READONLY, DEBUGGING
+  7 .debug_line   000002c0  00000000  00000000  0000142b  2**0
+                  CONTENTS, READONLY, DEBUGGING
+  8 .debug_frame  000000c0  00000000  00000000  000016ec  2**2
+                  CONTENTS, READONLY, DEBUGGING
+  9 .debug_str    000001ad  00000000  00000000  000017ac  2**0
+                  CONTENTS, READONLY, DEBUGGING
+ 10 .debug_loc    000000cb  00000000  00000000  00001959  2**0
+                  CONTENTS, READONLY, DEBUGGING
+ 11 .debug_ranges 00000038  00000000  00000000  00001a24  2**0
+                  CONTENTS, READONLY, DEBUGGING
+ 12 .text         00000004  00000172  00000172  00000246  2**1
+                  CONTENTS, ALLOC, LOAD, READONLY, CODE
+ 13 .note.gnu.avr.deviceinfo 0000003c  00000000  00000000  00001a5c  2**2
+                  CONTENTS, READONLY, DEBUGGING
+ 14 .text.EXIT_voidInit 00000016  0000013c  0000013c  00000210  2**1
+                  CONTENTS, ALLOC, LOAD, READONLY, CODE
+ 15 .text.Callback 0000000a  00000168  00000168  0000023c  2**1
+                  CONTENTS, ALLOC, LOAD, READONLY, CODE
+ 16 .text.__vector_1 0000004e  000000ae  000000ae  00000182  2**1
+                  CONTENTS, ALLOC, LOAD, READONLY, CODE
+ 17 .bss.global_ptr 00000002  00800060  00800060  00000254  2**0
+                  ALLOC
+ 18 .text.Toggle  00000026  000000fc  000000fc  000001d0  2**1
+                  CONTENTS, ALLOC, LOAD, READONLY, CODE
+ 19 .text.main    0000001a  00000122  00000122  000001f6  2**1
+                  CONTENTS, ALLOC, LOAD, READONLY, CODE
+ 20 .bss.x.1642   00000001  00800062  00800062  00000254  2**0
+                  ALLOC
+ 21 .text.__dummy_fini 00000002  0000017a  0000017a  0000024e  2**1
+                  CONTENTS, ALLOC, LOAD, READONLY, CODE
+ 22 .text.__dummy_funcs_on_exit 00000002  0000017c  0000017c  00000250  2**1
+                  CONTENTS, ALLOC, LOAD, READONLY, CODE
+ 23 .text.__dummy_simulator_exit 00000002  0000017e  0000017e  00000252  2**1
+                  CONTENTS, ALLOC, LOAD, READONLY, CODE
+ 24 .text.exit    00000016  00000152  00000152  00000226  2**1
+                  CONTENTS, ALLOC, LOAD, READONLY, CODE
+ 25 .text._Exit   00000004  00000176  00000176  0000024a  2**1
+                  CONTENTS, ALLOC, LOAD, READONLY, CODE
+
+Disassembly of section .text:
+
+00000000 <__vectors>:
+   0:	0c 94 2d 00 	jmp	0x5a	; 0x5a <__ctors_end>
+   4:	0c 94 57 00 	jmp	0xae	; 0xae <_etext>
+   8:	0c 94 b9 00 	jmp	0x172	; 0x172 <__bad_interrupt>
+   c:	0c 94 b9 00 	jmp	0x172	; 0x172 <__bad_interrupt>
+  10:	0c 94 b9 00 	jmp	0x172	; 0x172 <__bad_interrupt>
+  14:	0c 94 b9 00 	jmp	0x172	; 0x172 <__bad_interrupt>
+  18:	0c 94 b9 00 	jmp	0x172	; 0x172 <__bad_interrupt>
+  1c:	0c 94 b9 00 	jmp	0x172	; 0x172 <__bad_interrupt>
+  20:	0c 94 b9 00 	jmp	0x172	; 0x172 <__bad_interrupt>
+  24:	0c 94 b9 00 	jmp	0x172	; 0x172 <__bad_interrupt>
+  28:	0c 94 b9 00 	jmp	0x172	; 0x172 <__bad_interrupt>
+  2c:	0c 94 b9 00 	jmp	0x172	; 0x172 <__bad_interrupt>
+  30:	0c 94 b9 00 	jmp	0x172	; 0x172 <__bad_interrupt>
+  34:	0c 94 b9 00 	jmp	0x172	; 0x172 <__bad_interrupt>
+  38:	0c 94 b9 00 	jmp	0x172	; 0x172 <__bad_interrupt>
+  3c:	0c 94 b9 00 	jmp	0x172	; 0x172 <__bad_interrupt>
+  40:	0c 94 b9 00 	jmp	0x172	; 0x172 <__bad_interrupt>
+  44:	0c 94 b9 00 	jmp	0x172	; 0x172 <__bad_interrupt>
+  48:	0c 94 b9 00 	jmp	0x172	; 0x172 <__bad_interrupt>
+  4c:	0c 94 b9 00 	jmp	0x172	; 0x172 <__bad_interrupt>
+  50:	0c 94 b9 00 	jmp	0x172	; 0x172 <__bad_interrupt>
+
+00000054 <.dinit>:
+  54:	00 60       	ori	r16, 0x00	; 0
+  56:	00 63       	ori	r16, 0x30	; 48
+  58:	80 00       	.word	0x0080	; ????
+
+0000005a <__ctors_end>:
+  5a:	11 24       	eor	r1, r1
+  5c:	1f be       	out	0x3f, r1	; 63
+  5e:	cf e5       	ldi	r28, 0x5F	; 95
+  60:	d8 e0       	ldi	r29, 0x08	; 8
+  62:	de bf       	out	0x3e, r29	; 62
+  64:	cd bf       	out	0x3d, r28	; 61
+
+00000066 <__do_copy_data>:
+  66:	e4 e5       	ldi	r30, 0x54	; 84
+  68:	f0 e0       	ldi	r31, 0x00	; 0
+  6a:	40 e0       	ldi	r20, 0x00	; 0
+  6c:	17 c0       	rjmp	.+46     	; 0x9c <__do_clear_bss+0x8>
+  6e:	b5 91       	lpm	r27, Z+
+  70:	a5 91       	lpm	r26, Z+
+  72:	35 91       	lpm	r19, Z+
+  74:	25 91       	lpm	r18, Z+
+  76:	05 91       	lpm	r16, Z+
+  78:	07 fd       	sbrc	r16, 7
+  7a:	0c c0       	rjmp	.+24     	; 0x94 <__do_clear_bss>
+  7c:	95 91       	lpm	r25, Z+
+  7e:	85 91       	lpm	r24, Z+
+  80:	ef 01       	movw	r28, r30
+  82:	f9 2f       	mov	r31, r25
+  84:	e8 2f       	mov	r30, r24
+  86:	05 90       	lpm	r0, Z+
+  88:	0d 92       	st	X+, r0
+  8a:	a2 17       	cp	r26, r18
+  8c:	b3 07       	cpc	r27, r19
+  8e:	d9 f7       	brne	.-10     	; 0x86 <__do_copy_data+0x20>
+  90:	fe 01       	movw	r30, r28
+  92:	04 c0       	rjmp	.+8      	; 0x9c <__do_clear_bss+0x8>
+
+00000094 <__do_clear_bss>:
+  94:	1d 92       	st	X+, r1
+  96:	a2 17       	cp	r26, r18
+  98:	b3 07       	cpc	r27, r19
+  9a:	e1 f7       	brne	.-8      	; 0x94 <__do_clear_bss>
+  9c:	e9 35       	cpi	r30, 0x59	; 89
+  9e:	f4 07       	cpc	r31, r20
+  a0:	31 f7       	brne	.-52     	; 0x6e <__do_copy_data+0x8>
+  a2:	0e 94 91 00 	call	0x122	; 0x122 <main>
+  a6:	0c 94 a9 00 	jmp	0x152	; 0x152 <exit>
+
+000000aa <_exit>:
+  aa:	f8 94       	cli
+
+000000ac <__stop_program>:
+  ac:	ff cf       	rjmp	.-2      	; 0xac <__stop_program>
+
+Disassembly of section .text:
+
+00000172 <__bad_interrupt>:
+ 172:	0c 94 00 00 	jmp	0	; 0x0 <__vectors>
+
+Disassembly of section .text.EXIT_voidInit:
+
+0000013c <EXIT_voidInit>:
+void(*global_ptr)(void)= NULL;
+
+void EXIT_voidInit(void)
+{
+	//Choose EXternal interrupt mode
+	SET_BIT(MCUCR,0);
+ 13c:	85 b7       	in	r24, 0x35	; 53
+ 13e:	81 60       	ori	r24, 0x01	; 1
+ 140:	85 bf       	out	0x35, r24	; 53
+	SET_BIT(MCUCR,1);
+ 142:	85 b7       	in	r24, 0x35	; 53
+ 144:	82 60       	ori	r24, 0x02	; 2
+ 146:	85 bf       	out	0x35, r24	; 53
+	//Enable interrupt
+	SET_BIT(GICR,6);
+ 148:	8b b7       	in	r24, 0x3b	; 59
+ 14a:	80 64       	ori	r24, 0x40	; 64
+ 14c:	8b bf       	out	0x3b, r24	; 59
+	//Enable Global interrupt
+	//SET_BIT(SREG,)= macro el t7t ei = enable register
+	sei();
+ 14e:	78 94       	sei
+ 150:	08 95       	ret
+
+Disassembly of section .text.Callback:
+
+00000168 <Callback>:
+}
+
+void Callback(void(*ptr)(void))
+{
+	global_ptr=ptr;
+ 168:	90 93 61 00 	sts	0x0061, r25	; 0x800061 <_edata+0x1>
+ 16c:	80 93 60 00 	sts	0x0060, r24	; 0x800060 <_edata>
+ 170:	08 95       	ret
+
+Disassembly of section .text.__vector_1:
+
+000000ae <__vector_1>:
+}
+ISR(INT0_vect)
+{
+  ae:	1f 92       	push	r1
+  b0:	0f 92       	push	r0
+  b2:	0f b6       	in	r0, 0x3f	; 63
+  b4:	0f 92       	push	r0
+  b6:	11 24       	eor	r1, r1
+  b8:	2f 93       	push	r18
+  ba:	3f 93       	push	r19
+  bc:	4f 93       	push	r20
+  be:	5f 93       	push	r21
+  c0:	6f 93       	push	r22
+  c2:	7f 93       	push	r23
+  c4:	8f 93       	push	r24
+  c6:	9f 93       	push	r25
+  c8:	af 93       	push	r26
+  ca:	bf 93       	push	r27
+  cc:	ef 93       	push	r30
+  ce:	ff 93       	push	r31
+	global_ptr();
+  d0:	e0 91 60 00 	lds	r30, 0x0060	; 0x800060 <_edata>
+  d4:	f0 91 61 00 	lds	r31, 0x0061	; 0x800061 <_edata+0x1>
+  d8:	09 95       	icall
+  da:	ff 91       	pop	r31
+  dc:	ef 91       	pop	r30
+  de:	bf 91       	pop	r27
+  e0:	af 91       	pop	r26
+  e2:	9f 91       	pop	r25
+  e4:	8f 91       	pop	r24
+  e6:	7f 91       	pop	r23
+  e8:	6f 91       	pop	r22
+  ea:	5f 91       	pop	r21
+  ec:	4f 91       	pop	r20
+  ee:	3f 91       	pop	r19
+  f0:	2f 91       	pop	r18
+  f2:	0f 90       	pop	r0
+  f4:	0f be       	out	0x3f, r0	; 63
+  f6:	0f 90       	pop	r0
+  f8:	1f 90       	pop	r1
+  fa:	18 95       	reti
+
+Disassembly of section .text.Toggle:
+
+000000fc <Toggle>:
+#include <avr/interrupt.h>
+
+void Toggle(void)
+{
+	static u8 x =0;
+	if (x==0)
+  fc:	80 91 62 00 	lds	r24, 0x0062	; 0x800062 <x.1642>
+ 100:	81 11       	cpse	r24, r1
+ 102:	07 c0       	rjmp	.+14     	; 0x112 <Toggle+0x16>
+	{
+		SET_BIT(PORTD,3);
+ 104:	82 b3       	in	r24, 0x12	; 18
+ 106:	88 60       	ori	r24, 0x08	; 8
+ 108:	82 bb       	out	0x12, r24	; 18
+		x =1;
+ 10a:	81 e0       	ldi	r24, 0x01	; 1
+ 10c:	80 93 62 00 	sts	0x0062, r24	; 0x800062 <x.1642>
+ 110:	08 95       	ret
+	}
+	else if (x==1)
+ 112:	81 30       	cpi	r24, 0x01	; 1
+ 114:	29 f4       	brne	.+10     	; 0x120 <Toggle+0x24>
+	{
+		CLEAR_BIT(PORTD,3);
+ 116:	82 b3       	in	r24, 0x12	; 18
+ 118:	87 7f       	andi	r24, 0xF7	; 247
+ 11a:	82 bb       	out	0x12, r24	; 18
+		x=0;
+ 11c:	10 92 62 00 	sts	0x0062, r1	; 0x800062 <x.1642>
+ 120:	08 95       	ret
+
+Disassembly of section .text.main:
+
+00000122 <main>:
+	
+}
+int main(void)
+{
+	// define data direction for push button and led
+	CLEAR_BIT(DDRD,2);//set to 0 because push button is input
+ 122:	81 b3       	in	r24, 0x11	; 17
+ 124:	8b 7f       	andi	r24, 0xFB	; 251
+ 126:	81 bb       	out	0x11, r24	; 17
+	SET_BIT(DDRD,3);//set to 1 because led is output
+ 128:	81 b3       	in	r24, 0x11	; 17
+ 12a:	88 60       	ori	r24, 0x08	; 8
+ 12c:	81 bb       	out	0x11, r24	; 17
+	
+	EXIT_voidInit();
+ 12e:	0e 94 9e 00 	call	0x13c	; 0x13c <EXIT_voidInit>
+	Callback(&Toggle);
+ 132:	8e e7       	ldi	r24, 0x7E	; 126
+ 134:	90 e0       	ldi	r25, 0x00	; 0
+ 136:	0e 94 b4 00 	call	0x168	; 0x168 <Callback>
+ 13a:	ff cf       	rjmp	.-2      	; 0x13a <main+0x18>
+
+Disassembly of section .text.__dummy_fini:
+
+0000017a <_fini>:
+ 17a:	08 95       	ret
+
+Disassembly of section .text.__dummy_funcs_on_exit:
+
+0000017c <__funcs_on_exit>:
+ 17c:	08 95       	ret
+
+Disassembly of section .text.__dummy_simulator_exit:
+
+0000017e <__simulator_exit>:
+ 17e:	08 95       	ret
+
+Disassembly of section .text.exit:
+
+00000152 <exit>:
+ 152:	ec 01       	movw	r28, r24
+ 154:	0e 94 be 00 	call	0x17c	; 0x17c <__funcs_on_exit>
+ 158:	0e 94 bd 00 	call	0x17a	; 0x17a <_fini>
+ 15c:	ce 01       	movw	r24, r28
+ 15e:	0e 94 bf 00 	call	0x17e	; 0x17e <__simulator_exit>
+ 162:	ce 01       	movw	r24, r28
+ 164:	0e 94 bb 00 	call	0x176	; 0x176 <_Exit>
+
+Disassembly of section .text._Exit:
+
+00000176 <_Exit>:
+ 176:	0e 94 55 00 	call	0xaa	; 0xaa <_exit>
